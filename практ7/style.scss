@@ -1,0 +1,174 @@
+$main: #6c4cff;
+$dark: #17172b;
+$light: #f4f2ff;
+$white: #ffffff;
+$spacing: 25px;
+$radius: 15px;
+$font: Arial, sans-serif;
+
+@mixin button($color, $round) {
+    background: $color;
+    color: white;
+    padding: 14px 28px;
+    border-radius: $round;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+
+    &:hover {
+        background: #4930bd;
+        transform: scale(1.05);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font;
+    color: $dark;
+}
+
+header {
+    background: $dark;
+    color: $white;
+    padding: $spacing 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        color: $main;
+    }
+
+    nav {
+        display: flex;
+        gap: 25px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+                color: $main;
+            }
+        }
+    }
+}
+
+.hero {
+    background: $light;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    .content {
+        max-width: 550px;
+
+        h1 {
+            font-size: 45px;
+            color: $main;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+    }
+
+    .image {
+        font-size: 150px;
+    }
+
+    .button {
+        @include button($main, $radius);
+    }
+}
+
+.features {
+    padding: 50px 8%;
+    text-align: center;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        display: flex;
+        gap: $spacing;
+        margin-top: 30px;
+
+        .card {
+            flex: 1;
+            padding: 30px;
+            background: $light;
+            border-radius: $radius;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-8px);
+                background: #e5deff;
+            }
+
+            h3 {
+                color: $main;
+            }
+        }
+    }
+}
+
+.order {
+    background: $dark;
+    color: $white;
+    text-align: center;
+    padding: 50px 20px;
+
+    .button {
+        @include button($main, $radius);
+    }
+}
+
+footer {
+    background: #101020;
+    color: $white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+
+        .content h1 {
+            font-size: 32px;
+        }
+
+        .image {
+            font-size: 100px;
+        }
+    }
+
+    .features {
+        .cards {
+            flex-direction: column;
+        }
+    }
+}

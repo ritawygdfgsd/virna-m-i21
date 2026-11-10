@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #243047;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #142850;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #90e0ef;
+}
+
+.intro {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.intro h2 {
+    color: #142850;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 35px 7%;
+}
+
+section h2 {
+    text-align: center;
+    color: #142850;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.course-card h3 {
+    color: #0077b6;
+    font-size: 22px;
+}
+
+.course-card p {
+    color: #596579;
+}
+
+
+.course-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.course-bottom span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #023e8a;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.advantage {
+    background-color: #dff3ff;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.advantage h3 {
+    color: #142850;
+    margin-bottom: 10px;
+}
+
+/* ЗАВДАННЯ 1 — JUSTIFY-CONTENT */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+/* ЗАВДАННЯ 2 — FLEX-DIRECTION */
+
+.direction-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.direction-container div {
+    background-color: #caf0f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+/* ЗАВДАННЯ 3 — FLEX-WRAP */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    width: 200px;
+    padding: 25px;
+    background-color: #e0e7ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ЗАВДАННЯ 4 І 5 — GRID */
+
+.grid-example {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-example div {
+    background-color: #caf0f8;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.big {
+    grid-column: span 2;
+    background-color: #90e0ef !important;
+}
+
+/* ЗАВДАННЯ 6 — АДАПТИВНА GRID-СІТКА */
+
+.adaptive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.adaptive-grid div {
+    background-color: #dff3ff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.subtitle {
+    text-align: center;
+    margin: 35px 0 20px;
+    color: #27496d;
+}
+
+
+footer {
+    background-color: #142850;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 700px) {
+    .advantages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-example {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store — Інтернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Заголовок сайту -->
+    <header class="header">
+        <h1>Tech Store</h1>
+        <p>Твій магазин сучасної техніки</p>
+    </header>
+
+    <!-- Навігаційне меню -->
+    <nav class="menu">
+        <a href="#home">Головна</a>
+        <a href="#products">Товари</a>
+        <a href="#positioning">Позиціонування</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+
+    <main>
+        <!-- Головна сторінка -->
+        <section id="home" class="intro">
+            <h2>Ласкаво просимо до Tech Store!</h2>
+            <p>У нас ти знайдеш сучасні гаджети за вигідними цінами.</p>
+        </section>
+
+        <!-- Картки товарів -->
+        <section id="products">
+            <h2>Популярні товари</h2>
+
+            <div class="products-container">
+
+                <article class="product">
+                    <span class="discount">-20%</span>
+                    <div class="product-icon">💻</div>
+                    <h3>Ноутбук</h3>
+                    <p>Ноутбук для навчання та роботи.</p>
+                    <p class="old-price">31 250 грн</p>
+                    <p class="price">25 000 грн</p>
+                    <button class="buy-button">Купити</button>
+                </article>
+
+                <article class="product">
+                    <span class="discount">-15%</span>
+                    <div class="product-icon">📱</div>
+                    <h3>Смартфон</h3>
+                    <p>Потужний смартфон із якісною камерою.</p>
+                    <p class="old-price">17 650 грн</p>
+                    <p class="price">15 000 грн</p>
+                    <button class="buy-button">Купити</button>
+                </article>
+
+                <article class="product">
+                    <span class="discount">-10%</span>
+                    <div class="product-icon">🎧</div>
+                    <h3>Навушники</h3>
+                    <p>Бездротові навушники для музики та дзвінків.</p>
+                    <p class="old-price">3 890 грн</p>
+                    <p class="price">3 500 грн</p>
+                    <button class="buy-button">Купити</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Демонстрація position: static -->
+        <section id="positioning" class="demo-section">
+            <h2>1. Позиціонування static</h2>
+            <p>Блоки розташовуються у звичайному потоці сторінки.</p>
+
+            <div class="static-box">Перший блок</div>
+            <div class="static-box static-test">Другий блок — top: 50px</div>
+            <div class="static-box">Третій блок</div>
+        </section>
+
+        <!-- Демонстрація position: relative -->
+        <section class="demo-section">
+            <h2>2. Позиціонування relative</h2>
+            <p>Блок зміщений відносно свого початкового положення.</p>
+
+            <div class="relative-box">
+                Цей блок зміщений: top: 20px; left: 40px;
+            </div>
+        </section>
+
+        <!-- Демонстрація position: absolute -->
+        <section class="demo-section">
+            <h2>3. Позиціонування absolute</h2>
+            <p>Позначки зі знижками розміщені в кутах карток товарів.</p>
+            <p>Кнопка на рекламному банері також використовує absolute.</p>
+
+            <div class="banner">
+                <div class="banner-content">
+                    <h3>Великий розпродаж!</h3>
+                    <p>Знижки на сучасну техніку до 50%!</p>
+                </div>
+                <button class="banner-button">Детальніше</button>
+            </div>
+        </section>
+
+        <!-- Демонстрація z-index -->
+        <section class="demo-section">
+            <h2>4. Накладання елементів — z-index</h2>
+            <p>Другий блок знаходиться поверх першого завдяки z-index: 2.</p>
+
+            <div class="layers">
+                <div class="box1">Блок 1<br>z-index: 1</div>
+                <div class="box2">Блок 2<br>z-index: 2</div>
+            </div>
+        </section>
+
+        <!-- Додатковий текст для прокручування -->
+        <section class="demo-section information">
+            <h2>Чому варто обрати Tech Store?</h2>
+            <p>Ми пропонуємо великий вибір сучасної електроніки для навчання, роботи та відпочинку.</p>
+            <p>У нашому магазині можна знайти ноутбуки, смартфони, навушники та інші корисні гаджети.</p>
+            <p>Ми регулярно проводимо акції та пропонуємо знижки на популярні товари.</p>
+
+            <h3>Переваги нашого магазину</h3>
+            <ul>
+                <li>Великий вибір електроніки.</li>
+                <li>Вигідні ціни та знижки.</li>
+                <li>Зручне оформлення замовлення.</li>
+                <li>Допомога у виборі товару.</li>
+            </ul>
+
+            <p>Прокрути сторінку вниз, щоб перевірити роботу меню sticky та кнопки fixed.</p>
+            <p>CSS дозволяє точно керувати розташуванням елементів на вебсторінці.</p>
+        </section>
+    </main>
+
+    <!-- Контакти -->
+    <footer id="contacts" class="footer">
+        <h2>Контакти</h2>
+        <p>Email: techstore@example.com</p>
+        <p>© 2026 Tech Store. Усі права захищені.</p>
+    </footer>
+
+    <!-- Кнопка, яка залишається на екрані -->
+    <button class="help" onclick="alert('Вітаємо! Чим можемо допомогти?')">
+        Допомога
+    </button>
+
+</body>
+</html>

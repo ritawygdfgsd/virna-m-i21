@@ -1,0 +1,124 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f5;
+    color: #333;
+}
+
+/* Заголовок */
+.header {
+    grid-area: header;
+    background-color: #344f46;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* Меню */
+.menu {
+    grid-area: menu;
+    background-color: #263c35;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+/* Основний макет */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "gallery"
+        "about";
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Галерея */
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    gap: 15px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Великі фотографії */
+.item-large {
+    grid-column: span 2;
+}
+
+.item-tall {
+    grid-row: span 2;
+}
+
+/* Про галерею */
+.about {
+    grid-area: about;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Планшети */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-large {
+        grid-column: auto;
+    }
+
+    .item-tall {
+        grid-row: auto;
+    }
+}
+
+/* Смартфони */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery > * {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .menu a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
